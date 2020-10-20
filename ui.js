@@ -6,10 +6,10 @@ function getConfigData(data) {
 }
 
 module.exports = api => api.describeConfig({
-  id: 'com.netlify.netlify-lambda',
+  id: 'solutions.galactic.netlify-lambda',
   name: 'Netlify configuration',
   description: 'Configure Netlify Functions',
-  link: 'https://github.com/netlify/vue-cli-plugin-netlify-lambda',
+  link: 'https://github.com/Galactic-Software/vue-cli-plugin-netlify-lambda',
   files: {
     vue: {
       js: ['vue.config.js'],

@@ -9,7 +9,7 @@ beforeAll(async () => {
   rimraf(path.resolve(cwd, "example-netlify-lambda-project"), () => {});
 });
 
-test("should create vuex modules", async () => {
+test("should create vue modules", async () => {
   const project = await create(
     "example-netlify-lambda-project",
     {
@@ -22,12 +22,12 @@ test("should create vuex modules", async () => {
   await project.run(
     `${require.resolve(
       "@vue/cli/bin/vue"
-    )} add vue-cli-plugin-netlify-lambda@file:../../`
+    )} add @galacticsoftware/vue-cli-plugin-netlify-lambda@file:../../`
   );
   await project.run(
     `${require.resolve(
       "@vue/cli/bin/vue"
-    )} invoke vue-cli-plugin-netlify-lambda`
+    )} invoke @galacticsoftware/vue-cli-plugin-netlify-lambda`
   );
   expect(await project.has("src/lambda/hello.js")).toBe(true);
 });
